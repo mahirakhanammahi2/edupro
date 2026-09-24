@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Teachers - EduPro</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/components.css">
+  </head>
+
+  <body>
+    <!-- ================================
+     NAVBAR START
+================================ -->
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <span class="brand-edu">Edu</span><span class="brand-pro">Pro</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="courses.html">Courses</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="department.html">Departments</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="teachers.html">Teachers</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="students.html">Students</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="gallery.html">Gallery</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="notice.html">Notice</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+
+            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+              <a href="contact.html" class="nav-link nav-apply-btn">
+                Apply Now
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================================
+     NAVBAR END
+================================ -->
+
+    <!-- ================================
+     PAGE HEADER START
+================================ -->
+
+    <section class="inner-page-header">
+      <div class="container">
+        <div class="inner-page-header-content text-center">
+          <span class="page-header-badge">
+            <i class="bi bi-images"></i>
+            EduPro Gallery
+          </span>
+
+          <h1>Our <span>Gallery</span></h1>
+
+          <p>
+            Explore memorable moments, campus activities, events and student
+            life at EduPro.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================
+     PAGE HEADER END
+================================ -->
+
+    <!-- ================================
+     GALLERY SECTION START
+================================ -->
+
+    <section class="gallery-page-section section-padding">
+      <div class="container">
+        <!-- Section Heading -->
+
+        <div class="section-heading text-center">
+          <span class="section-badge">
+            <i class="bi bi-camera"></i>
+            Our Moments
+          </span>
+
+          <h2>
+            Explore Our
+            <span>Memorable Moments</span>
+          </h2>
+
+          <p>
+            Take a look at our campus, events, students and activities through
+            our gallery.
+          </p>
+        </div>
+
+        <!-- Gallery Filter -->
+
+        <div class="gallery-filter">
+          <button class="gallery-filter-btn active" data-filter="all">
+            All
+          </button>
+
+          <button class="gallery-filter-btn" data-filter="campus">
+            Campus
+          </button>
+
+          <button class="gallery-filter-btn" data-filter="events">
+            Events
+          </button>
+
+          <button class="gallery-filter-btn" data-filter="students">
+            Students
+          </button>
+
+          <button class="gallery-filter-btn" data-filter="activities">
+            Activities
+          </button>
+        </div>
+
+        <!-- Gallery Grid -->
+
+        <div class="row g-4 gallery-grid">
+          <!-- Gallery Item 01 -->
+
+          <div class="col-lg-4 col-md-6 gallery-item" data-category="campus">
+            <div class="gallery-card">
+              <img src="./assets/images/gallery-1.jpg" alt="EduPro Campus" />
+
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span>Campus</span>
+
+                  <h3>EduPro Campus</h3>
+
+                  <button
+                    class="gallery-view-btn"
+                    data-image="./assets/images/gallery-1.jpg"
+                    data-title="EduPro Campus"
+                  >
+                    <i class="bi bi-arrows-fullscreen"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 02 -->
+
+          <div class="col-lg-4 col-md-6 gallery-item" data-category="events">
+            <div class="gallery-card">
+              <img src="./assets/images/gallery-2.jpg" alt="Annual Event" />
+
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span>Events</span>
+
+                  <h3>Annual Event</h3>
+
+                  <button
+                    class="gallery-view-btn"
+                    data-image="./assets/images/gallery-2.jpg"
+                    data-title="Annual Event"
+                  >
+                    <i class="bi bi-arrows-fullscreen"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 03 -->
+
+          <div class="col-lg-4 col-md-6 gallery-item" data-category="students">
+            <div class="gallery-card">
+              <img
+                src="./assets/images/gallery-3.jpg"
+                alt="Student Activities"
+              />
+
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span>Students</span>
+
+                  <h3>Student Activities</h3>
+
+                  <button
+                    class="gallery-view-btn"
+                    data-image="./assets/images/gallery-3.jpg"
+                    data-title="Student Activities"
+                  >
+                    <i class="bi bi-arrows-fullscreen"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 04 -->
+
+          <div
+            class="col-lg-4 col-md-6 gallery-item"
+            data-category="activities"
+          >
+            <div class="gallery-card">
+              <img
+                src="./assets/images/gallery-4.jpg"
+                alt="Learning Activities"
+              />
+
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span>Activities</span>
+
+                  <h3>Learning Activities</h3>
+
+                  <button
+                    class="gallery-view-btn"
+                    data-image="./assets/images/gallery-4.jpg"
+                    data-title="Learning Activities"
+                  >
+                    <i class="bi bi-arrows-fullscreen"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 05 -->
+
+          <div class="col-lg-4 col-md-6 gallery-item" data-category="campus">
+            <div class="gallery-card">
+              <img src="./assets/images/gallery-5.jpg" alt="Modern Classroom" />
+
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span>Campus</span>
+
+                  <h3>Modern Classroom</h3>
+
+                  <button
+                    class="gallery-view-btn"
+                    data-image="./assets/images/gallery-5.jpg"
+                    data-title="Modern Classroom"
+                  >
+                    <i class="bi bi-arrows-fullscreen"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 06 -->
+
+          <div class="col-lg-4 col-md-6 gallery-item" data-category="events">
+            <div class="gallery-card">
+              <img src="./assets/images/gallery-6.jpg" alt="Education Event" />
+
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span>Events</span>
+
+                  <h3>Education Event</h3>
+
+                  <button
+                    class="gallery-view-btn"
+                    data-image="./assets/images/gallery-6.jpg"
+                    data-title="Education Event"
+                  >
+                    <i class="bi bi-arrows-fullscreen"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 07 -->
+
+          <div class="col-lg-4 col-md-6 gallery-item" data-category="students">
+            <div class="gallery-card">
+              <img src="./assets/images/gallery-7.jpg" alt="Student Group" />
+
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span>Students</span>
+
+                  <h3>Student Group</h3>
+
+                  <button
+                    class="gallery-view-btn"
+                    data-image="./assets/images/gallery-7.jpg"
+                    data-title="Student Group"
+                  >
+                    <i class="bi bi-arrows-fullscreen"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 08 -->
+
+          <div
+            class="col-lg-4 col-md-6 gallery-item"
+            data-category="activities"
+          >
+            <div class="gallery-card">
+              <img
+                src="./assets/images/gallery-8.jpg"
+                alt="Practical Learning"
+              />
+
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span>Activities</span>
+
+                  <h3>Practical Learning</h3>
+
+                  <button
+                    class="gallery-view-btn"
+                    data-image="./assets/images/gallery-8.jpg"
+                    data-title="Practical Learning"
+                  >
+                    <i class="bi bi-arrows-fullscreen"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 09 -->
+
+          <div class="col-lg-4 col-md-6 gallery-item" data-category="campus">
+            <div class="gallery-card">
+              <img src="./assets/images/gallery-9.jpg" alt="Computer Lab" />
+
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span>Campus</span>
+
+                  <h3>Computer Lab</h3>
+
+                  <button
+                    class="gallery-view-btn"
+                    data-image="./assets/images/gallery-9.jpg"
+                    data-title="Computer Lab"
+                  >
+                    <i class="bi bi-arrows-fullscreen"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================
+     GALLERY SECTION END
+================================ -->
+
+    <!-- ================================
+     LIGHTBOX MODAL
+================================ -->
+
+    <div class="gallery-lightbox" id="galleryLightbox">
+      <button
+        type="button"
+        class="gallery-lightbox-close"
+        id="galleryLightboxClose"
+      >
+        <i class="bi bi-x-lg"></i>
+      </button>
+
+      <div class="gallery-lightbox-content">
+        <img id="galleryLightboxImage" src="" alt="Gallery Image" />
+
+        <h3 id="galleryLightboxTitle">Gallery Image</h3>
+      </div>
+    </div>
+
+    <!-- ================================
+     CTA START
+================================ -->
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content text-center">
+          <span class="cta-badge"> Start Your Journey </span>
+
+          <h2>Ready to Start Learning?</h2>
+
+          <p>
+            Take the next step toward your goals. Join EduPro and start learning
+            today.
+          </p>
+
+          <div class="cta-buttons">
+            <a href="contact.html" class="btn btn-light">
+              Get Started
+              <i class="bi bi-arrow-right"></i>
+            </a>
+
+            <a href="courses.html" class="btn btn-outline-light">
+              Explore Courses
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================
+     CTA END
+================================ -->
+
+    <!-- ================================
+     FOOTER START
+================================ -->
+    <!-- Footer Start -->
+
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Brand -->
+
+          <div class="col-lg-4 col-md-6">
+            <a href="index.html" class="footer-logo">
+              <span class="brand-edu">Edu</span
+              ><span class="brand-pro">Pro</span>
+            </a>
+
+            <p class="footer-description">
+              EduPro is a modern education website template designed for
+              schools, colleges, coaching centers and online learning platforms.
+            </p>
+
+            <!-- Social Icons -->
+
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+
+              <a href="#" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <a href="#" aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+
+              <a href="#" aria-label="YouTube">
+                <i class="bi bi-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-title">Quick Links</h5>
+
+            <ul class="footer-links">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+
+              <li>
+                <a href="about.html">About</a>
+              </li>
+
+              <li>
+                <a href="courses.html">Courses</a>
+              </li>
+
+              <li>
+                <a href="teachers.html">Teachers</a>
+              </li>
+
+              <li>
+                <a href="gallery.html">Gallery</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Useful Links -->
+
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-title">Useful Links</h5>
+
+            <ul class="footer-links">
+              <li>
+                <a href="students.html">Students</a>
+              </li>
+
+              <li>
+                <a href="department.html">Departments</a>
+              </li>
+
+              <li>
+                <a href="notice.html">Notice</a>
+              </li>
+
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+
+          <div class="col-lg-4 col-md-6">
+            <h5 class="footer-title">Contact Us</h5>
+
+            <ul class="footer-contact">
+              <li>
+                <i class="bi bi-geo-alt-fill"></i>
+
+                <span>
+                  123 Education Street,<br />
+                  Dhaka, Bangladesh
+                </span>
+              </li>
+
+              <li>
+                <i class="bi bi-telephone-fill"></i>
+
+                <a href="tel:+8801234567890"> +880 1234-567890 </a>
+              </li>
+
+              <li>
+                <i class="bi bi-envelope-fill"></i>
+
+                <a href="mailto:info@edupro.com"> info@edupro.com </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+          <p>© 2026 EduPro. All Rights Reserved.</p>
+
+          <p>
+            Designed with
+            <i class="bi bi-heart-fill footer-heart"></i>
+            for Education
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer End -->
+
+    <!-- ================================
+     FOOTER END
+================================ -->
+
+    <!-- Bootstrap JS -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- Gallery JS -->
+
+    <script>
+      /* ================================
+     GALLERY FILTER
+  ================================= */
+
+      const galleryFilterButtons = document.querySelectorAll(
+        ".gallery-filter-btn",
+      );
+
+      const galleryItems = document.querySelectorAll(".gallery-item");
+
+      galleryFilterButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          galleryFilterButtons.forEach(function (btn) {
+            btn.classList.remove("active");
+          });
+
+          this.classList.add("active");
+
+          const filterValue = this.getAttribute("data-filter");
+
+          galleryItems.forEach(function (item) {
+            const category = item.getAttribute("data-category");
+
+            if (filterValue === "all" || category === filterValue) {
+              item.classList.remove("gallery-hidden");
+            } else {
+              item.classList.add("gallery-hidden");
+            }
+          });
+        });
+      });
+
+      /* ================================
+     LIGHTBOX
+  ================================= */
+
+      const galleryLightbox = document.getElementById("galleryLightbox");
+
+      const galleryLightboxImage = document.getElementById(
+        "galleryLightboxImage",
+      );
+
+      const galleryLightboxTitle = document.getElementById(
+        "galleryLightboxTitle",
+      );
+
+      const galleryLightboxClose = document.getElementById(
+        "galleryLightboxClose",
+      );
+
+      const galleryViewButtons = document.querySelectorAll(".gallery-view-btn");
+
+      galleryViewButtons.forEach(function (button) {
+        button.addEventListener("click", function (event) {
+          event.stopPropagation();
+
+          const image = this.getAttribute("data-image");
+
+          const title = this.getAttribute("data-title");
+
+          galleryLightboxImage.src = image;
+
+          galleryLightboxImage.alt = title;
+
+          galleryLightboxTitle.textContent = title;
+
+          galleryLightbox.classList.add("show");
+
+          document.body.classList.add("gallery-lightbox-open");
+        });
+      });
+
+      function closeGalleryLightbox() {
+        galleryLightbox.classList.remove("show");
+
+        document.body.classList.remove("gallery-lightbox-open");
+      }
+
+      galleryLightboxClose.addEventListener("click", closeGalleryLightbox);
+
+      galleryLightbox.addEventListener("click", function (event) {
+        if (event.target === galleryLightbox) {
+          closeGalleryLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (
+          event.key === "Escape" &&
+          galleryLightbox.classList.contains("show")
+        ) {
+          closeGalleryLightbox();
+        }
+      });
+    </script>
+  </body>
+</html>

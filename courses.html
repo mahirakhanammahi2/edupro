@@ -1,0 +1,849 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Teachers - EduPro</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+       NAVBAR START
+  ====================================================== -->
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- Logo -->
+
+        <a class="navbar-brand" href="index.html">
+          <span class="brand-edu">Edu</span><span class="brand-pro">Pro</span>
+        </a>
+
+        <!-- Mobile Button -->
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Navbar Menu -->
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"> Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"> About </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="courses.html"> Courses </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="department.html"> Departments </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="teachers.html"> Teachers </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="students.html"> Students </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html"> Gallery </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="notice.html"> Notice </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"> Contact </a>
+            </li>
+
+            <!-- Apply Button -->
+
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+              <a href="contact.html" class="apply-btn"> Apply Now </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- =====================================================
+       NAVBAR END
+  ====================================================== -->
+
+    <!-- =====================================================
+       PAGE HEADER START
+  ====================================================== -->
+
+    <section class="page-header py-5">
+      <div class="container text-center">
+        <span class="badge bg-primary px-3 py-2 mb-3"> Our Courses </span>
+
+        <h1 class="fw-bold">Explore Our Courses</h1>
+
+        <p class="mb-0">
+          Learn practical skills from industry-focused courses designed for your
+          future.
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+       PAGE HEADER END
+  ====================================================== -->
+
+    <!-- =====================================================
+       COURSE CATEGORIES START
+  ====================================================== -->
+
+    <section class="course-category-section py-5">
+      <div class="container">
+        <!-- Section Heading -->
+
+        <div class="text-center mb-5">
+          <span class="section-subtitle"> Course Categories </span>
+
+          <h2 class="section-title mt-2">
+            Choose Your <span>Learning Path</span>
+          </h2>
+
+          <p class="section-description">
+            Explore different learning categories and build the skills you need
+            for your academic and professional journey.
+          </p>
+        </div>
+
+        <!-- Categories -->
+
+        <div class="row g-4">
+          <!-- Category 1 -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="course-category-card">
+              <div class="course-category-icon">
+                <i class="bi bi-code-slash"></i>
+              </div>
+
+              <h4>Programming</h4>
+
+              <p>Learn C, C++, Java, Python and modern programming concepts.</p>
+
+              <a
+                href="course-details.html?course=programming"
+                class="category-link"
+              >
+                Explore Courses
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="course-category-card">
+              <div class="course-category-icon">
+                <i class="bi bi-globe2"></i>
+              </div>
+
+              <h4>Web Development</h4>
+
+              <p>Build modern websites using HTML, CSS, Bootstrap and PHP.</p>
+
+              <a href="course-details.html?course=web" class="category-link">
+                Explore Courses
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="course-category-card">
+              <div class="course-category-icon">
+                <i class="bi bi-database-fill"></i>
+              </div>
+
+              <h4>Database</h4>
+
+              <p>Understand database systems, SQL, MySQL and DBMS concepts.</p>
+
+              <a
+                href="course-details.html?course=database"
+                class="category-link"
+              >
+                Explore Courses
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Category 4 -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="course-category-card">
+              <div class="course-category-icon">
+                <i class="bi bi-diagram-3-fill"></i>
+              </div>
+
+              <h4>Networking</h4>
+
+              <p>Learn computer networking, protocols, devices and security.</p>
+
+              <a
+                href="course-details.html?course=networking"
+                class="category-link"
+              >
+                Explore Courses
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Category 5 -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="course-category-card">
+              <div class="course-category-icon">
+                <i class="bi bi-palette-fill"></i>
+              </div>
+
+              <h4>Graphic Design</h4>
+
+              <p>Develop creative design skills for digital and print media.</p>
+
+              <a href="course-details.html?course=design" class="category-link">
+                Explore Courses
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Category 6 -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="course-category-card">
+              <div class="course-category-icon">
+                <i class="bi bi-laptop-fill"></i>
+              </div>
+
+              <h4>Computer Fundamentals</h4>
+
+              <p>
+                Master computer basics, operating systems and essential tools.
+              </p>
+
+              <a
+                href="course-details.html?course=computer"
+                class="category-link"
+              >
+                Explore Courses
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+       COURSE CATEGORIES END
+  ====================================================== -->
+
+    <!-- =====================================================
+       POPULAR COURSES START
+  ====================================================== -->
+
+    <section class="courses-section py-5" id="popular-courses">
+      <div class="container">
+        <!-- Section Heading -->
+
+        <div class="text-center mb-5">
+          <span class="section-subtitle"> Popular Courses </span>
+
+          <h2 class="section-title mt-2">Start Learning <span>Today</span></h2>
+
+          <p class="section-description">
+            Choose from our most popular courses and start developing practical
+            skills for your future.
+          </p>
+        </div>
+
+        <!-- =================================================
+           COURSE FILTER
+      ================================================== -->
+
+        <div class="course-filter">
+          <button class="filter-btn active" data-filter="all">
+            All Courses
+          </button>
+
+          <button class="filter-btn" data-filter="programming">
+            Programming
+          </button>
+
+          <button class="filter-btn" data-filter="web">Web Development</button>
+
+          <button class="filter-btn" data-filter="database">Database</button>
+
+          <button class="filter-btn" data-filter="networking">
+            Networking
+          </button>
+
+          <button class="filter-btn" data-filter="design">
+            Graphic Design
+          </button>
+
+          <button class="filter-btn" data-filter="computer">Computer</button>
+        </div>
+
+        <!-- =================================================
+           COURSE GRID
+      ================================================== -->
+
+        <div class="row g-4">
+          <!-- =================================================
+             COURSE 1 - WEB
+        ================================================== -->
+
+          <div class="col-lg-4 col-md-6 course-item" data-category="web">
+            <div class="course-card">
+              <div class="course-image-wrapper">
+                <img
+                  src="./assets/images/course-web.jpg"
+                  alt="Full Stack Web Development Course"
+                  class="course-image"
+                />
+
+                <span class="course-category"> Web Development </span>
+              </div>
+
+              <div class="course-content">
+                <div class="course-rating">
+                  <i class="bi bi-star-fill"></i>
+
+                  <span> 4.9 </span>
+
+                  <small> (120 Students) </small>
+                </div>
+
+                <h4>Full Stack Web Development</h4>
+
+                <p>
+                  Learn how to create modern and responsive websites from
+                  beginner to advanced level.
+                </p>
+
+                <div class="course-footer">
+                  <span class="course-price"> $49 </span>
+
+                  <a href="course-details.html?course=web" class="course-btn">
+                    View Course
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================================
+             COURSE 2 - PROGRAMMING
+        ================================================== -->
+
+          <div
+            class="col-lg-4 col-md-6 course-item"
+            data-category="programming"
+          >
+            <div class="course-card">
+              <div class="course-image-wrapper">
+                <img
+                  src="./assets/images/course-programming.jpg"
+                  alt="Programming Fundamentals Course"
+                  class="course-image"
+                />
+
+                <span class="course-category"> Programming </span>
+              </div>
+
+              <div class="course-content">
+                <div class="course-rating">
+                  <i class="bi bi-star-fill"></i>
+
+                  <span> 4.8 </span>
+
+                  <small> (95 Students) </small>
+                </div>
+
+                <h4>Programming Fundamentals</h4>
+
+                <p>
+                  Build strong programming fundamentals with C, C++ and Python.
+                </p>
+
+                <div class="course-footer">
+                  <span class="course-price"> $39 </span>
+
+                  <a
+                    href="course-details.html?course=programming"
+                    class="course-btn"
+                  >
+                    View Course
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================================
+             COURSE 3 - DATABASE
+        ================================================== -->
+
+          <div class="col-lg-4 col-md-6 course-item" data-category="database">
+            <div class="course-card">
+              <div class="course-image-wrapper">
+                <img
+                  src="./assets/images/course-database.jpg"
+                  alt="Database and MySQL Course"
+                  class="course-image"
+                />
+
+                <span class="course-category"> Database </span>
+              </div>
+
+              <div class="course-content">
+                <div class="course-rating">
+                  <i class="bi bi-star-fill"></i>
+
+                  <span> 4.7 </span>
+
+                  <small> (82 Students) </small>
+                </div>
+
+                <h4>Database & MySQL</h4>
+
+                <p>
+                  Learn database concepts, SQL queries, MySQL and practical
+                  database management.
+                </p>
+
+                <div class="course-footer">
+                  <span class="course-price"> $35 </span>
+
+                  <a
+                    href="course-details.html?course=database"
+                    class="course-btn"
+                  >
+                    View Course
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================================
+             COURSE 4 - NETWORKING
+        ================================================== -->
+
+          <div class="col-lg-4 col-md-6 course-item" data-category="networking">
+            <div class="course-card">
+              <div class="course-image-wrapper">
+                <img
+                  src="./assets/images/course-networking.jpg"
+                  alt="Computer Networking Course"
+                  class="course-image"
+                />
+
+                <span class="course-category"> Networking </span>
+              </div>
+
+              <div class="course-content">
+                <div class="course-rating">
+                  <i class="bi bi-star-fill"></i>
+
+                  <span> 4.8 </span>
+
+                  <small> (76 Students) </small>
+                </div>
+
+                <h4>Computer Networking</h4>
+
+                <p>
+                  Understand networking fundamentals, protocols, devices and
+                  network security.
+                </p>
+
+                <div class="course-footer">
+                  <span class="course-price"> $42 </span>
+
+                  <a
+                    href="course-details.html?course=networking"
+                    class="course-btn"
+                  >
+                    View Course
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================================
+             COURSE 5 - GRAPHIC DESIGN
+        ================================================== -->
+
+          <div class="col-lg-4 col-md-6 course-item" data-category="design">
+            <div class="course-card">
+              <div class="course-image-wrapper">
+                <img
+                  src="./assets/images/course-graphic.jpg"
+                  alt="Graphic Design Masterclass Course"
+                  class="course-image"
+                />
+
+                <span class="course-category"> Design </span>
+              </div>
+
+              <div class="course-content">
+                <div class="course-rating">
+                  <i class="bi bi-star-fill"></i>
+
+                  <span> 4.9 </span>
+
+                  <small> (110 Students) </small>
+                </div>
+
+                <h4>Graphic Design Masterclass</h4>
+
+                <p>
+                  Learn design principles and create professional digital
+                  graphics.
+                </p>
+
+                <div class="course-footer">
+                  <span class="course-price"> $45 </span>
+
+                  <a
+                    href="course-details.html?course=design"
+                    class="course-btn"
+                  >
+                    View Course
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================================
+             COURSE 6 - COMPUTER
+        ================================================== -->
+
+          <div class="col-lg-4 col-md-6 course-item" data-category="computer">
+            <div class="course-card">
+              <div class="course-image-wrapper">
+                <img
+                  src="./assets/images/course-computer.jpg"
+                  alt="Computer Fundamentals Course"
+                  class="course-image"
+                />
+
+                <span class="course-category"> Computer </span>
+              </div>
+
+              <div class="course-content">
+                <div class="course-rating">
+                  <i class="bi bi-star-fill"></i>
+
+                  <span> 4.8 </span>
+
+                  <small> (140 Students) </small>
+                </div>
+
+                <h4>Computer Fundamentals</h4>
+
+                <p>
+                  Master computer basics, MS Office, operating systems and
+                  essential digital skills.
+                </p>
+
+                <div class="course-footer">
+                  <span class="course-price"> $29 </span>
+
+                  <a
+                    href="course-details.html?course=computer"
+                    class="course-btn"
+                  >
+                    View Course
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+       POPULAR COURSES END
+  ====================================================== -->
+
+    <!-- =====================================================
+       CTA START
+  ====================================================== -->
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-wrapper">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <span class="cta-badge"> Start Your Journey </span>
+
+              <h2 class="cta-title">Ready to Start Learning?</h2>
+
+              <p class="cta-text">
+                Choose your course and take the next step toward your academic
+                and professional goals.
+              </p>
+
+              <div class="cta-buttons">
+                <a href="#popular-courses" class="cta-btn-primary">
+                  Explore Courses
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+
+                <a href="contact.html" class="cta-btn-secondary">
+                  Contact Us
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="cta-illustration">
+                <div class="cta-circle"></div>
+
+                <div class="cta-icon">
+                  <i class="bi bi-book-half"></i>
+                </div>
+
+                <div class="floating-book">
+                  <i class="bi bi-book"></i>
+                </div>
+
+                <div class="floating-bulb">
+                  <i class="bi bi-lightbulb-fill"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+       CTA END
+  ====================================================== -->
+
+    <!-- =====================================================
+       FOOTER START
+  ====================================================== -->
+
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Brand -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-brand">
+              <a href="index.html" class="footer-logo">
+                <span class="brand-edu">Edu</span
+                ><span class="brand-pro">Pro</span>
+              </a>
+            </div>
+
+            <p class="footer-description">
+              Empowering students with quality education, practical skills and
+              opportunities for a better future.
+            </p>
+
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+
+              <a href="#" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <a href="#" aria-label="Twitter">
+                <i class="bi bi-twitter-x"></i>
+              </a>
+
+              <a href="#" aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-title">Quick Links</h5>
+
+            <ul class="footer-links">
+              <li>
+                <a href="index.html"> Home </a>
+              </li>
+
+              <li>
+                <a href="about.html"> About </a>
+              </li>
+
+              <li>
+                <a href="courses.html"> Courses </a>
+              </li>
+
+              <li>
+                <a href="teachers.html"> Teachers </a>
+              </li>
+
+              <li>
+                <a href="contact.html"> Contact </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Useful Links -->
+
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-title">Useful Links</h5>
+
+            <ul class="footer-links">
+              <li>
+                <a href="department.html"> Departments </a>
+              </li>
+
+              <li>
+                <a href="students.html"> Students </a>
+              </li>
+
+              <li>
+                <a href="gallery.html"> Gallery </a>
+              </li>
+
+              <li>
+                <a href="notice.html"> Notice </a>
+              </li>
+
+              <li>
+                <a href="#"> FAQ </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+
+          <div class="col-lg-4 col-md-6">
+            <h5 class="footer-title">Contact Us</h5>
+
+            <ul class="footer-contact">
+              <li>
+                <i class="bi bi-geo-alt-fill"></i>
+
+                <span> 123 Education Street, Dhaka, Bangladesh </span>
+              </li>
+
+              <li>
+                <i class="bi bi-telephone-fill"></i>
+
+                <span> +880 1234-567890 </span>
+              </li>
+
+              <li>
+                <i class="bi bi-envelope-fill"></i>
+
+                <span> info@edupro.com </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+          <p>© 2026 EduPro. All Rights Reserved.</p>
+
+          <p>
+            Designed with
+            <i class="bi bi-heart-fill"></i>
+            for Education
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =====================================================
+       FOOTER END
+  ====================================================== -->
+
+    <!-- =====================================================
+       BOOTSTRAP JS
+  ====================================================== -->
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- =====================================================
+       CUSTOM JS
+  ====================================================== -->
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
