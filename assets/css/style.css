@@ -63,10 +63,7 @@ body {
 
 /* Hover */
 
-.navbar-nav .nav-link:hover {
-  color: #3563ff !important;
-  transform: translateY(-2px);
-}
+
 
 /* Active */
 
@@ -2478,5 +2475,122 @@ img {
 
   .navbar-collapse {
     display: flex !important;
+  }
+}
+
+/* ================================
+   NAVBAR TEXT FLICKER / JUMP FIX
+================================ */
+
+/* Prevent navbar items from changing position */
+.navbar-nav {
+  align-items: center;
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+
+  /* Keep font stable */
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+
+  /* Prevent text jump */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+
+  /* Smooth color only */
+  transition: color 0.2s ease;
+}
+
+/* Remove any movement on hover/focus/active */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:active,
+.navbar-nav .nav-link.active {
+  transform: none;
+}
+
+/* Active / hover underline */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+
+  width: 0;
+  height: 2px;
+
+  transform: translateX(-50%);
+  transition: width 0.25s ease;
+}
+
+/* Show underline */
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 60%;
+}
+
+/* Prevent apply button from moving other navbar items */
+.nav-apply-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Mobile menu button */
+.navbar-toggler {
+  border: 0;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+/* Prevent icon flicker */
+.navbar-toggler i {
+  display: block;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* =================================
+   MOBILE NAVBAR
+================================= */
+
+@media (max-width: 991.98px) {
+
+  .navbar-collapse {
+    overflow: hidden;
+  }
+
+  .navbar-nav {
+    align-items: flex-start !important;
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link::after {
+    left: 0;
+    transform: none;
+  }
+
+  .navbar-nav .nav-link:hover::after,
+  .navbar-nav .nav-link.active::after {
+    width: 40px;
   }
 }
