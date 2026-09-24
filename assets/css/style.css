@@ -98,8 +98,6 @@ body {
   width: 65%;
 }
 
-
-
 /* =========================================
    MOBILE NAVBAR BUTTON
 ========================================= */
@@ -183,7 +181,6 @@ body {
     text-align: center;
   }
 }
-
 
 /* ================================
    Features Section
@@ -457,7 +454,6 @@ body {
   }
 }
 
-
 /* =========================================
    FOOTER SOCIAL ICON FIX
 ========================================= */
@@ -524,8 +520,6 @@ body {
     font-size: 19px;
   }
 }
-
-
 
 /* ==============================
    CTA SECTION
@@ -1090,8 +1084,6 @@ body {
   }
 }
 
-
-
 /* =====================================================
    GLOBAL NAVBAR - SAME ON EVERY PAGE
 ===================================================== */
@@ -1468,8 +1460,6 @@ body {
   transform: translateX(5px);
 }
 
-
-
 /* =====================================================
    COURSES PAGE - RESPONSIVE
 ===================================================== */
@@ -1823,7 +1813,6 @@ body {
   font-size: 14px;
 }
 
-
 /* =====================================================
    GLOBAL NAVBAR - SAME ON ALL PAGES
 ===================================================== */
@@ -2123,8 +2112,6 @@ body {
   }
 }
 
-
-
 /* ================================
    FOOTER LOGO - GLOBAL
 ================================ */
@@ -2180,3 +2167,316 @@ body {
   }
 }
 
+/* =========================================================
+   TEACHERS PAGE - MOBILE / RESPONSIVE FIX
+   ========================================================= */
+
+/* Prevent horizontal scrollbar */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+/* Keep all sections inside viewport */
+section,
+header,
+footer,
+main {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+nav {
+  max-width: 100%;
+  overflow: visible !important;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  max-width: 100%;
+  overflow: visible !important;
+}
+
+.navbar .container {
+  width: 100%;
+  max-width: 1140px;
+}
+
+/* Navbar toggler */
+.navbar-toggler {
+  display: none;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 7px 4px !important;
+  color: #172554 !important;
+  font-size: 22px !important;
+}
+
+.navbar-toggler i {
+  display: block !important;
+  color: #172554 !important;
+  font-size: 22px !important;
+  line-height: 1 !important;
+}
+
+/* Apply button */
+.nav-apply-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none !important;
+  }
+
+  .navbar-collapse {
+    display: flex !important;
+  }
+
+  .navbar-nav {
+    align-items: center !important;
+  }
+}
+
+/* Tablet + Mobile */
+@media (max-width: 991.98px) {
+  .navbar {
+    min-height: 70px;
+    padding: 15px 0 !important;
+  }
+
+  .navbar .container {
+    position: relative;
+  }
+
+  .navbar-toggler {
+    display: block !important;
+    margin-left: auto;
+  }
+
+  .navbar-collapse {
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px;
+    border-radius: 16px;
+    background: #172554;
+    box-shadow: 0 15px 35px rgba(23, 37, 84, 0.15);
+  }
+
+  .navbar-nav {
+    width: 100%;
+    align-items: stretch !important;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    width: 100%;
+    margin-left: 0 !important;
+    padding: 11px 14px !important;
+    border-radius: 9px;
+    color: #ffffff !important;
+    font-size: 12px !important;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active {
+    background: rgba(255, 255, 255, 0.08);
+    color: #8ea0ff !important;
+  }
+
+  .navbar-nav .nav-item.ms-lg-3 {
+    margin-top: 8px;
+    margin-left: 0 !important;
+  }
+
+  .nav-apply-btn {
+    width: 100%;
+    padding: 11px 16px !important;
+    border-radius: 9px !important;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 575.98px) {
+  .navbar {
+    min-height: 66px;
+    padding: 14px 0 !important;
+  }
+
+  .navbar .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .navbar .navbar-brand,
+  .navbar .navbar-brand .brand-edu,
+  .navbar .navbar-brand .brand-pro {
+    font-size: 22px !important;
+  }
+
+  .navbar-toggler {
+    font-size: 20px !important;
+  }
+
+  .navbar-toggler i {
+    font-size: 20px !important;
+  }
+
+  .navbar-collapse {
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 14px;
+  }
+}
+
+/* =========================================================
+   EXTRA RESPONSIVE OVERFLOW FIX
+   ========================================================= */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+}
+
+.hero-section,
+.features-section,
+.about-section,
+.courses-section,
+.stats-section,
+.teachers-section,
+.testimonials-section,
+.gallery-section,
+.cta-section,
+.footer-section {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .hero-section .row,
+  .features-section .row,
+  .about-section .row,
+  .courses-section .row,
+  .stats-section .row,
+  .teachers-section .row,
+  .testimonials-section .row,
+  .gallery-section .row,
+  .cta-section .row,
+  .footer-section .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* =====================================================
+   FINAL MOBILE NAVBAR FIX
+===================================================== */
+
+.navbar {
+  position: relative;
+  z-index: 99999 !important;
+  overflow: visible !important;
+}
+
+.navbar > .container,
+.navbar > .container-fluid {
+  position: relative;
+  z-index: 99999;
+}
+
+.navbar-toggler {
+  position: relative;
+  z-index: 100000 !important;
+  display: block;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  cursor: pointer;
+}
+
+.navbar-toggler i {
+  position: relative;
+  z-index: 100001;
+  pointer-events: none;
+}
+
+.navbar-collapse {
+  position: relative;
+  z-index: 99998 !important;
+}
+
+/* Mobile */
+@media (max-width: 991.98px) {
+
+  .navbar {
+    position: relative;
+    z-index: 99999 !important;
+  }
+
+  .navbar-toggler {
+    display: block !important;
+    position: relative;
+    z-index: 100000 !important;
+  }
+
+  .navbar-collapse {
+    position: relative;
+    z-index: 99998 !important;
+
+    width: 100%;
+    margin-top: 12px;
+    padding: 15px;
+
+    background: #172554 !important;
+
+    border-radius: 14px;
+
+    box-shadow: 0 15px 35px rgba(23, 37, 84, 0.15);
+  }
+
+  .navbar-collapse.show {
+    display: block !important;
+  }
+
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    color: #ffffff !important;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+
+  .navbar-toggler {
+    display: none !important;
+  }
+
+  .navbar-collapse {
+    display: flex !important;
+  }
+}

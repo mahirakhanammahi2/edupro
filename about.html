@@ -4,104 +4,118 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Teachers - EduPro</title>
+    <title>About - EduPro</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- ================= BOOTSTRAP CSS ================= -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <!-- Bootstrap Icons -->
+    <!-- ================= BOOTSTRAP ICONS ================= -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
 
-    <!-- Font Awesome -->
+    <!-- ================= FONT AWESOME ================= -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
 
-    <!-- Google Font -->
+    <!-- ================= GOOGLE FONT ================= -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Main CSS -->
+    <!-- ================= MAIN CSS ================= -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/components.css">
+
+    <!-- ================= COMPONENTS CSS ================= -->
+    <link rel="stylesheet" href="./assets/css/components.css" />
   </head>
 
   <body>
-    <!-- ================= NAVBAR ================= -->
+    <!-- ==================================================
+         NAVBAR START
+    ================================================== -->
 
     <nav class="navbar navbar-expand-lg">
       <div class="container">
+        <!-- Logo -->
         <a class="navbar-brand" href="index.html">
           <span class="brand-edu">Edu</span><span class="brand-pro">Pro</span>
         </a>
 
+        <!-- Mobile Toggle -->
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <i class="fa-solid fa-bars"></i>
         </button>
 
+        <!-- Navigation -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html"> Home </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="about.html"
-                >About</a
-              >
+              <a class="nav-link active" href="about.html"> About </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="courses.html">Courses</a>
+              <a class="nav-link" href="courses.html"> Courses </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="department.html">Departments</a>
+              <a class="nav-link" href="department.html"> Departments </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="teachers.html">Teachers</a>
+              <a class="nav-link" href="teachers.html"> Teachers </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="students.html">Students</a>
+              <a class="nav-link" href="students.html"> Students </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
+              <a class="nav-link" href="gallery.html"> Gallery </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="notice.html">Notice</a>
+              <a class="nav-link" href="notice.html"> Notice </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="contact.html"> Contact </a>
             </li>
 
             <li class="nav-item ms-lg-3">
-              <a href="contact.html" class="apply-btn"> Apply Now </a>
+              <a href="contact.html" class="nav-apply-btn"> Apply Now </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- ================= PAGE HEADER ================= -->
+    <!-- ==================================================
+         NAVBAR END
+    ================================================== -->
+
+    <!-- ==================================================
+         PAGE HEADER START
+    ================================================== -->
 
     <section class="page-header py-5">
       <div class="container text-center">
@@ -115,13 +129,18 @@
       </div>
     </section>
 
-    <!-- ================= ABOUT INTRO ================= -->
+    <!-- ==================================================
+         PAGE HEADER END
+    ================================================== -->
+
+    <!-- ==================================================
+         ABOUT INTRO START
+    ================================================== -->
 
     <section class="about-page-section py-5">
       <div class="container">
         <div class="row align-items-center g-5">
           <!-- Image -->
-
           <div class="col-lg-6">
             <div class="about-page-image">
               <img
@@ -138,7 +157,6 @@
           </div>
 
           <!-- Content -->
-
           <div class="col-lg-6">
             <span class="section-subtitle"> Who We Are </span>
 
@@ -158,30 +176,30 @@
               prepare themselves for a successful future.
             </p>
 
-            <!-- Points -->
-
+            <!-- Check List -->
             <div class="about-check-list">
               <div class="about-check-item">
                 <i class="bi bi-check-circle-fill"></i>
-                <span>Experienced and dedicated teachers</span>
+                <span> Experienced and dedicated teachers </span>
               </div>
 
               <div class="about-check-item">
                 <i class="bi bi-check-circle-fill"></i>
-                <span>Modern and practical learning methods</span>
+                <span> Modern and practical learning methods </span>
               </div>
 
               <div class="about-check-item">
                 <i class="bi bi-check-circle-fill"></i>
-                <span>Career-focused educational programs</span>
+                <span> Career-focused educational programs </span>
               </div>
 
               <div class="about-check-item">
                 <i class="bi bi-check-circle-fill"></i>
-                <span>Student-friendly learning environment</span>
+                <span> Student-friendly learning environment </span>
               </div>
             </div>
 
+            <!-- Button -->
             <a href="courses.html" class="btn btn-primary mt-4 px-4 py-2">
               Explore Courses
               <i class="bi bi-arrow-right ms-2"></i>
@@ -191,7 +209,13 @@
       </div>
     </section>
 
-    <!-- ================= MISSION VISION ================= -->
+    <!-- ==================================================
+         ABOUT INTRO END
+    ================================================== -->
+
+    <!-- ==================================================
+         MISSION & VISION START
+    ================================================== -->
 
     <section class="mission-section py-5">
       <div class="container">
@@ -203,7 +227,6 @@
 
         <div class="row g-4">
           <!-- Mission -->
-
           <div class="col-md-6">
             <div class="mission-card h-100">
               <div class="mission-icon">
@@ -220,7 +243,6 @@
           </div>
 
           <!-- Vision -->
-
           <div class="col-md-6">
             <div class="mission-card h-100">
               <div class="mission-icon">
@@ -239,7 +261,13 @@
       </div>
     </section>
 
-    <!-- ================= WHY CHOOSE US ================= -->
+    <!-- ==================================================
+         MISSION & VISION END
+    ================================================== -->
+
+    <!-- ==================================================
+         WHY CHOOSE US START
+    ================================================== -->
 
     <section class="why-us-section py-5">
       <div class="container">
@@ -254,6 +282,7 @@
         </div>
 
         <div class="row g-4">
+          <!-- Expert Teachers -->
           <div class="col-md-6 col-lg-3">
             <div class="why-card">
               <i class="bi bi-person-workspace"></i>
@@ -264,6 +293,7 @@
             </div>
           </div>
 
+          <!-- Modern Learning -->
           <div class="col-md-6 col-lg-3">
             <div class="why-card">
               <i class="bi bi-laptop"></i>
@@ -274,6 +304,7 @@
             </div>
           </div>
 
+          <!-- Quality Education -->
           <div class="col-md-6 col-lg-3">
             <div class="why-card">
               <i class="bi bi-award"></i>
@@ -284,6 +315,7 @@
             </div>
           </div>
 
+          <!-- Career Growth -->
           <div class="col-md-6 col-lg-3">
             <div class="why-card">
               <i class="bi bi-graph-up-arrow"></i>
@@ -297,7 +329,13 @@
       </div>
     </section>
 
-    <!-- ================= CTA ================= -->
+    <!-- ==================================================
+         WHY CHOOSE US END
+    ================================================== -->
+
+    <!-- ==================================================
+         CTA START
+    ================================================== -->
 
     <section class="cta-section py-5">
       <div class="container">
@@ -314,19 +352,23 @@
       </div>
     </section>
 
-    <!-- ================= FOOTER ================= -->
+    <!-- ==================================================
+         CTA END
+    ================================================== -->
 
-    <!-- Footer Start -->
+    <!-- ==================================================
+         FOOTER START
+    ================================================== -->
 
     <footer class="footer-section">
       <div class="container">
         <div class="row g-4">
           <!-- Brand -->
-
           <div class="col-lg-4 col-md-6">
             <a href="index.html" class="footer-logo">
-  <span class="brand-edu">Edu</span><span class="brand-pro">Pro</span>
-</a>
+              <span class="brand-edu">Edu</span
+              ><span class="brand-pro">Pro</span>
+            </a>
 
             <p class="footer-description">
               EduPro is a modern education website template designed for
@@ -334,7 +376,6 @@
             </p>
 
             <!-- Social Icons -->
-
             <div class="footer-social">
               <a href="#" aria-label="Facebook">
                 <i class="bi bi-facebook"></i>
@@ -355,63 +396,60 @@
           </div>
 
           <!-- Quick Links -->
-
           <div class="col-lg-2 col-md-6">
             <h5 class="footer-title">Quick Links</h5>
 
             <ul class="footer-links">
               <li>
-                <a href="index.html">Home</a>
+                <a href="index.html"> Home </a>
               </li>
 
               <li>
-                <a href="about.html">About</a>
+                <a href="about.html"> About </a>
               </li>
 
               <li>
-                <a href="courses.html">Courses</a>
+                <a href="courses.html"> Courses </a>
               </li>
 
               <li>
-                <a href="teachers.html">Teachers</a>
+                <a href="teachers.html"> Teachers </a>
               </li>
 
               <li>
-                <a href="gallery.html">Gallery</a>
+                <a href="gallery.html"> Gallery </a>
               </li>
             </ul>
           </div>
 
           <!-- Useful Links -->
-
           <div class="col-lg-2 col-md-6">
             <h5 class="footer-title">Useful Links</h5>
 
             <ul class="footer-links">
               <li>
-                <a href="students.html">Students</a>
+                <a href="students.html"> Students </a>
               </li>
 
               <li>
-                <a href="department.html">Departments</a>
+                <a href="department.html"> Departments </a>
               </li>
 
               <li>
-                <a href="notice.html">Notice</a>
+                <a href="notice.html"> Notice </a>
               </li>
 
               <li>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html"> Contact </a>
               </li>
 
               <li>
-                <a href="#">Privacy Policy</a>
+                <a href="#"> Privacy Policy </a>
               </li>
             </ul>
           </div>
 
           <!-- Contact -->
-
           <div class="col-lg-4 col-md-6">
             <h5 class="footer-title">Contact Us</h5>
 
@@ -441,7 +479,6 @@
         </div>
 
         <!-- Footer Bottom -->
-
         <div class="footer-bottom">
           <p>© 2026 EduPro. All Rights Reserved.</p>
 
@@ -454,12 +491,20 @@
       </div>
     </footer>
 
-    <!-- Footer End -->
+    <!-- ==================================================
+         FOOTER END
+    ================================================== -->
 
-    <!-- Bootstrap JS -->
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <!-- Temporary JavaScript Test --> 
+
+    <!-- Bootstrap JavaScript -->
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom JS -->
+    <!-- Custom JavaScript -->
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

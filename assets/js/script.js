@@ -8,7 +8,7 @@ const toggleButton = document.querySelector(".navbar-toggler");
 if (navbar && toggleButton) {
   const icon = toggleButton.querySelector("i");
 
-  // Hamburger / Times icon change
+  // Hamburger -> X
   navbar.addEventListener("shown.bs.collapse", function () {
     if (icon) {
       icon.classList.remove("fa-bars");
@@ -16,6 +16,7 @@ if (navbar && toggleButton) {
     }
   });
 
+  // X -> Hamburger
   navbar.addEventListener("hidden.bs.collapse", function () {
     if (icon) {
       icon.classList.remove("fa-xmark");
@@ -33,22 +34,21 @@ if (navbar && toggleButton) {
       !toggleButton.contains(event.target)
     ) {
       const collapse = bootstrap.Collapse.getOrCreateInstance(navbar);
-
       collapse.hide();
     }
   });
 
-  // Menu item click -> close navbar
+  // Menu item click -> close mobile navbar
   const navLinks = navbar.querySelectorAll(".nav-link");
 
   navLinks.forEach(function (link) {
     link.addEventListener("click", function () {
       const collapse = bootstrap.Collapse.getOrCreateInstance(navbar);
-
       collapse.hide();
     });
   });
 }
+
 
 // =====================================================
 // STATISTICS COUNTER
@@ -56,38 +56,34 @@ if (navbar && toggleButton) {
 
 const counters = document.querySelectorAll(".counter");
 
-const startCounter = (counter) => {
+function startCounter(counter) {
   const target = Number(counter.dataset.target);
-
   let current = 0;
 
   const increment = target / 100;
 
-  const updateCounter = () => {
+  function updateCounter() {
     current += increment;
 
     if (current < target) {
       counter.textContent = Math.floor(current);
-
       requestAnimationFrame(updateCounter);
     } else {
       counter.textContent = target;
     }
-  };
+  }
 
   updateCounter();
-};
-
-// Start counter when section is visible
+}
 
 const statsSection = document.querySelector(".stats-section");
 
 if (statsSection && counters.length > 0) {
   const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
+    function (entries) {
+      entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          counters.forEach((counter) => {
+          counters.forEach(function (counter) {
             startCounter(counter);
           });
 
@@ -95,76 +91,63 @@ if (statsSection && counters.length > 0) {
         }
       });
     },
-
     {
       threshold: 0.3,
-    },
+    }
   );
 
   observer.observe(statsSection);
 }
 
+
 // =====================================================
-// COURSE FILTER FUNCTIONALITY
+// COURSE FILTER
 // =====================================================
 
 const filterButtons = document.querySelectorAll(".filter-btn");
-
 const courseItems = document.querySelectorAll(".course-item");
 
-filterButtons.forEach((button) => {
-  button.addEventListener("click", function () {
-    // Active button
-    filterButtons.forEach((btn) => {
-      btn.classList.remove("active");
-    });
+if (filterButtons.length > 0 && courseItems.length > 0) {
+  filterButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      filterButtons.forEach(function (btn) {
+        btn.classList.remove("active");
+      });
 
-    this.classList.add("active");
+      this.classList.add("active");
 
-    // Selected category
-    const filterValue = this.getAttribute("data-filter");
+      const filterValue = this.getAttribute("data-filter");
 
-    // Show / Hide courses
-    courseItems.forEach((course) => {
-      const category = course.getAttribute("data-category");
+      courseItems.forEach(function (course) {
+        const category = course.getAttribute("data-category");
 
-      if (filterValue === "all" || category === filterValue) {
-        course.classList.remove("filter-hide");
-        course.style.display = "";
-      } else {
-        course.classList.add("filter-hide");
-        course.style.display = "none";
-      }
+        if (filterValue === "all" || category === filterValue) {
+          course.classList.remove("filter-hide");
+          course.style.display = "";
+        } else {
+          course.classList.add("filter-hide");
+          course.style.display = "none";
+        }
+      });
     });
   });
-});
+}
+
 
 // =====================================================
 // COURSE DETAILS DATA
 // =====================================================
 
 const courseData = {
-  // ---------------------------------------------------
-  // WEB DEVELOPMENT
-  // ---------------------------------------------------
-
   web: {
     category: "Web Development",
-
     title: "Full Stack Web Development",
-
     image: "./assets/images/course-web.jpg",
-
     rating: "4.9",
-
     students: "120 Students",
-
     price: "$49",
-
     duration: "8 Weeks",
-
     lessons: "42 Lessons",
-
     level: "Beginner - Advanced",
 
     description:
@@ -189,27 +172,15 @@ const courseData = {
     ],
   },
 
-  // ---------------------------------------------------
-  // PROGRAMMING
-  // ---------------------------------------------------
-
   programming: {
     category: "Programming",
-
     title: "Programming Fundamentals",
-
     image: "./assets/images/course-programming.jpg",
-
     rating: "4.8",
-
     students: "95 Students",
-
     price: "$39",
-
     duration: "6 Weeks",
-
     lessons: "35 Lessons",
-
     level: "Beginner",
 
     description:
@@ -234,27 +205,15 @@ const courseData = {
     ],
   },
 
-  // ---------------------------------------------------
-  // DATABASE
-  // ---------------------------------------------------
-
   database: {
     category: "Database",
-
     title: "Database & MySQL",
-
     image: "./assets/images/course-database.jpg",
-
     rating: "4.7",
-
     students: "82 Students",
-
     price: "$35",
-
     duration: "5 Weeks",
-
     lessons: "28 Lessons",
-
     level: "Beginner - Intermediate",
 
     description:
@@ -279,27 +238,15 @@ const courseData = {
     ],
   },
 
-  // ---------------------------------------------------
-  // NETWORKING
-  // ---------------------------------------------------
-
   networking: {
     category: "Networking",
-
     title: "Computer Networking",
-
     image: "./assets/images/course-networking.jpg",
-
     rating: "4.8",
-
     students: "76 Students",
-
     price: "$42",
-
     duration: "7 Weeks",
-
     lessons: "32 Lessons",
-
     level: "Intermediate",
 
     description:
@@ -324,27 +271,15 @@ const courseData = {
     ],
   },
 
-  // ---------------------------------------------------
-  // GRAPHIC DESIGN
-  // ---------------------------------------------------
-
   design: {
     category: "Design",
-
     title: "Graphic Design Masterclass",
-
     image: "./assets/images/course-graphic.jpg",
-
     rating: "4.9",
-
     students: "110 Students",
-
     price: "$45",
-
     duration: "6 Weeks",
-
     lessons: "30 Lessons",
-
     level: "Beginner - Advanced",
 
     description:
@@ -369,27 +304,15 @@ const courseData = {
     ],
   },
 
-  // ---------------------------------------------------
-  // COMPUTER FUNDAMENTALS
-  // ---------------------------------------------------
-
   computer: {
     category: "Computer",
-
     title: "Computer Fundamentals",
-
     image: "./assets/images/course-computer.jpg",
-
     rating: "4.8",
-
     students: "140 Students",
-
     price: "$29",
-
     duration: "4 Weeks",
-
     lessons: "24 Lessons",
-
     level: "Beginner",
 
     description:
@@ -415,85 +338,61 @@ const courseData = {
   },
 };
 
+
 // =====================================================
 // LOAD COURSE DETAILS
 // =====================================================
 
 const urlParams = new URLSearchParams(window.location.search);
-
 const selectedCourse = urlParams.get("course");
 
 if (selectedCourse && courseData[selectedCourse]) {
   const course = courseData[selectedCourse];
 
-  // ---------------------------------------------------
-  // BASIC COURSE INFORMATION
-  // ---------------------------------------------------
-
   const titleElement = document.querySelector(".course-details-title");
-
   const imageElement = document.querySelector(".course-details-image img");
-
   const categoryElement = document.querySelector(".details-category");
-
   const ratingElement = document.querySelector(".details-rating strong");
-
   const studentsElement = document.querySelector(".details-rating span");
-
   const priceElement = document.querySelector(".details-price");
 
-  // Title
   if (titleElement) {
     titleElement.textContent = course.title;
   }
 
-  // Image
   if (imageElement) {
     imageElement.src = course.image;
-
     imageElement.alt = course.title;
   }
 
-  // Category
   if (categoryElement) {
     categoryElement.textContent = course.category;
   }
 
-  // Rating
   if (ratingElement) {
     ratingElement.textContent = course.rating;
   }
 
-  // Students
   if (studentsElement) {
     studentsElement.textContent = `(${course.students})`;
   }
 
-  // Price
   if (priceElement) {
     priceElement.textContent = course.price;
   }
 
-  // Browser title
   document.title = `${course.title} - EduPro`;
 
-  // ---------------------------------------------------
-  // COURSE DESCRIPTION
-  // ---------------------------------------------------
-
-  const descriptionElements = document.querySelectorAll(".course-details-text");
+  const descriptionElements =
+    document.querySelectorAll(".course-details-text");
 
   if (descriptionElements.length > 0) {
     descriptionElements[0].textContent = course.description;
   }
 
-  // ---------------------------------------------------
-  // WHAT YOU'LL LEARN
-  // ---------------------------------------------------
-
   const learnItems = document.querySelectorAll(".learn-item");
 
-  learnItems.forEach((item, index) => {
+  learnItems.forEach(function (item, index) {
     const textElement = item.querySelector("span");
 
     if (textElement && course.learn[index]) {
@@ -501,42 +400,32 @@ if (selectedCourse && courseData[selectedCourse]) {
     }
   });
 
-  // ---------------------------------------------------
-  // COURSE CURRICULUM
-  // ---------------------------------------------------
+  const curriculumItems =
+    document.querySelectorAll(".curriculum-item");
 
-  const curriculumItems = document.querySelectorAll(".curriculum-item");
+  curriculumItems.forEach(function (item, index) {
+    const lessonTitle = item.querySelector(".lesson-title");
 
-  curriculumItems.forEach((item, index) => {
-    const titleElement = item.querySelector(".lesson-title");
-
-    if (titleElement && course.curriculum[index]) {
-      titleElement.textContent = course.curriculum[index];
+    if (lessonTitle && course.curriculum[index]) {
+      lessonTitle.textContent = course.curriculum[index];
     }
   });
-
-  // ---------------------------------------------------
-  // COURSE INFORMATION
-  // ---------------------------------------------------
 
   const infoItems = document.querySelectorAll(".info-item");
 
   if (infoItems.length >= 3) {
-    // Duration
     const durationValue = infoItems[0].querySelector("strong");
 
     if (durationValue) {
       durationValue.textContent = course.duration;
     }
 
-    // Lessons
     const lessonsValue = infoItems[1].querySelector("strong");
 
     if (lessonsValue) {
       lessonsValue.textContent = course.lessons;
     }
 
-    // Level
     const levelValue = infoItems[2].querySelector("strong");
 
     if (levelValue) {
@@ -545,38 +434,54 @@ if (selectedCourse && courseData[selectedCourse]) {
   }
 }
 
-/* =====================================================
-   STUDENT SEARCH & FILTER
-====================================================== */
+
+// =====================================================
+// STUDENT SEARCH & FILTER
+// =====================================================
 
 const studentSearch = document.getElementById("studentSearch");
 const studentFilter = document.getElementById("studentFilter");
 const studentItems = document.querySelectorAll(".student-item");
-const studentCountNumber = document.querySelector(".student-count-number");
+const studentCountNumber =
+  document.querySelector(".student-count-number");
 const noStudentFound = document.getElementById("noStudentFound");
-const resetStudentSearch = document.getElementById("resetStudentSearch");
+const resetStudentSearch =
+  document.getElementById("resetStudentSearch");
 
 function filterStudents() {
-  const searchValue = studentSearch.value.toLowerCase().trim();
-  const filterValue = studentFilter.value;
+  const searchValue = studentSearch
+    ? studentSearch.value.toLowerCase().trim()
+    : "";
+
+  const filterValue = studentFilter
+    ? studentFilter.value
+    : "all";
 
   let visibleCount = 0;
 
   studentItems.forEach(function (item) {
-    const studentName = item.querySelector("h3").textContent.toLowerCase();
+    const nameElement = item.querySelector("h3");
+    const descriptionElement =
+      item.querySelector(".student-content > p");
 
-    const studentDescription = item
-      .querySelector(".student-content > p")
-      .textContent.toLowerCase();
+    const studentName = nameElement
+      ? nameElement.textContent.toLowerCase()
+      : "";
 
-    const studentCourse = item.getAttribute("data-course");
+    const studentDescription = descriptionElement
+      ? descriptionElement.textContent.toLowerCase()
+      : "";
+
+    const studentCourse =
+      item.getAttribute("data-course");
 
     const matchesSearch =
       studentName.includes(searchValue) ||
       studentDescription.includes(searchValue);
 
     const matchesFilter =
-      filterValue === "all" || studentCourse === filterValue;
+      filterValue === "all" ||
+      studentCourse === filterValue;
 
     if (matchesSearch && matchesFilter) {
       item.classList.remove("student-hidden");
@@ -586,125 +491,179 @@ function filterStudents() {
     }
   });
 
-  /* Update Count */
-
   if (studentCountNumber) {
-    studentCountNumber.textContent = String(visibleCount).padStart(2, "0");
+    studentCountNumber.textContent =
+      String(visibleCount).padStart(2, "0");
   }
-
-  /* Show / Hide No Result */
 
   if (noStudentFound) {
-    if (visibleCount === 0) {
-      noStudentFound.style.display = "block";
-    } else {
-      noStudentFound.style.display = "none";
-    }
+    noStudentFound.style.display =
+      visibleCount === 0 ? "block" : "none";
   }
 }
-
-/* Search */
 
 if (studentSearch) {
   studentSearch.addEventListener("input", filterStudents);
 }
 
-/* Filter */
-
 if (studentFilter) {
   studentFilter.addEventListener("change", filterStudents);
 }
 
-/* Reset */
-
 if (resetStudentSearch) {
   resetStudentSearch.addEventListener("click", function () {
-    studentSearch.value = "";
-    studentFilter.value = "all";
+    if (studentSearch) {
+      studentSearch.value = "";
+    }
+
+    if (studentFilter) {
+      studentFilter.value = "all";
+    }
 
     filterStudents();
   });
 }
 
-/* =====================================================
-   STUDENT DETAILS MODAL
-====================================================== */
 
-const studentTriggers = document.querySelectorAll(".student-details-trigger");
+// =====================================================
+// STUDENT DETAILS MODAL
+// =====================================================
 
-const modalStudentImage = document.getElementById("modalStudentImage");
+const studentTriggers =
+  document.querySelectorAll(".student-details-trigger");
 
-const modalStudentCourse = document.getElementById("modalStudentCourse");
+const studentDetailsModal =
+  document.getElementById("studentDetailsModal");
 
-const modalStudentName = document.getElementById("modalStudentName");
+if (studentDetailsModal && typeof bootstrap !== "undefined") {
+  const studentModal =
+    new bootstrap.Modal(studentDetailsModal);
 
-const modalStudentDescription = document.getElementById(
-  "modalStudentDescription",
-);
+  const modalStudentImage =
+    document.getElementById("modalStudentImage");
 
-const modalStudentLevel = document.getElementById("modalStudentLevel");
+  const modalStudentCourse =
+    document.getElementById("modalStudentCourse");
 
-const modalStudentBatch = document.getElementById("modalStudentBatch");
+  const modalStudentName =
+    document.getElementById("modalStudentName");
 
-const studentDetailsModal = document.getElementById("studentDetailsModal");
+  const modalStudentDescription =
+    document.getElementById("modalStudentDescription");
 
-if (studentDetailsModal) {
-  const studentModal = new bootstrap.Modal(studentDetailsModal);
+  const modalStudentLevel =
+    document.getElementById("modalStudentLevel");
+
+  const modalStudentBatch =
+    document.getElementById("modalStudentBatch");
 
   studentTriggers.forEach(function (card) {
     card.addEventListener("click", function () {
-      const image = this.querySelector(".student-image").getAttribute("src");
+      const imageElement =
+        this.querySelector(".student-image");
 
-      const course = this.getAttribute("data-course");
+      const nameElement =
+        this.querySelector("h3");
 
-      const name = this.querySelector("h3").textContent.trim();
+      const descriptionElement =
+        this.querySelector(".student-content > p");
 
-      const description = this.querySelector(
-        ".student-content > p",
-      ).textContent.trim();
+      const metaItems =
+        this.querySelectorAll(".student-meta span");
 
-      const metaItems = this.querySelectorAll(".student-meta span");
+      const image = imageElement
+        ? imageElement.getAttribute("src")
+        : "";
 
-      const level = metaItems[0].textContent.replace("Level:", "").trim();
+      const course =
+        this.getAttribute("data-course") || "";
 
-      const batch = metaItems[1].textContent.replace("Batch", "").trim();
+      const name = nameElement
+        ? nameElement.textContent.trim()
+        : "";
 
-      modalStudentImage.src = image;
-      modalStudentImage.alt = name;
+      const description = descriptionElement
+        ? descriptionElement.textContent.trim()
+        : "";
 
-      modalStudentCourse.textContent = course;
-      modalStudentName.textContent = name;
-      modalStudentDescription.textContent = description;
-      modalStudentLevel.textContent = level;
-      modalStudentBatch.textContent = batch;
+      const level = metaItems[0]
+        ? metaItems[0].textContent
+            .replace("Level:", "")
+            .trim()
+        : "";
+
+      const batch = metaItems[1]
+        ? metaItems[1].textContent
+            .replace("Batch", "")
+            .trim()
+        : "";
+
+      if (modalStudentImage) {
+        modalStudentImage.src = image;
+        modalStudentImage.alt = name;
+      }
+
+      if (modalStudentCourse) {
+        modalStudentCourse.textContent = course;
+      }
+
+      if (modalStudentName) {
+        modalStudentName.textContent = name;
+      }
+
+      if (modalStudentDescription) {
+        modalStudentDescription.textContent = description;
+      }
+
+      if (modalStudentLevel) {
+        modalStudentLevel.textContent = level;
+      }
+
+      if (modalStudentBatch) {
+        modalStudentBatch.textContent = batch;
+      }
 
       studentModal.show();
     });
   });
 }
 
-/* =========================================================
-   NOTICE PAGE
-========================================================= */
 
-const noticeSearch = document.getElementById("noticeSearch");
-const noticeFilterButtons = document.querySelectorAll(".notice-filter-btn");
-const noticeItems = document.querySelectorAll(".notice-item");
-const noNoticeFound = document.getElementById("noNoticeFound");
+// =====================================================
+// NOTICE PAGE
+// =====================================================
 
-const noticeModal = document.getElementById("noticeModal");
-const noticeModalClose = document.getElementById("noticeModalClose");
+const noticeSearch =
+  document.getElementById("noticeSearch");
 
-const modalNoticeTitle = document.getElementById("modalNoticeTitle");
-const modalNoticeDate = document.getElementById("modalNoticeDate");
-const modalNoticeCategory = document.getElementById("modalNoticeCategory");
-const modalNoticeDescription = document.getElementById(
-  "modalNoticeDescription",
-);
+const noticeFilterButtons =
+  document.querySelectorAll(".notice-filter-btn");
+
+const noticeItems =
+  document.querySelectorAll(".notice-item");
+
+const noNoticeFound =
+  document.getElementById("noNoticeFound");
+
+const noticeModal =
+  document.getElementById("noticeModal");
+
+const noticeModalClose =
+  document.getElementById("noticeModalClose");
+
+const modalNoticeTitle =
+  document.getElementById("modalNoticeTitle");
+
+const modalNoticeDate =
+  document.getElementById("modalNoticeDate");
+
+const modalNoticeCategory =
+  document.getElementById("modalNoticeCategory");
+
+const modalNoticeDescription =
+  document.getElementById("modalNoticeDescription");
 
 let selectedNoticeCategory = "all";
-
-/* ================= Notice Filter ================= */
 
 function filterNotices() {
   const searchValue = noticeSearch
@@ -714,35 +673,34 @@ function filterNotices() {
   let visibleCount = 0;
 
   noticeItems.forEach(function (notice) {
-    const category = notice.getAttribute("data-category");
-    const title = notice.getAttribute("data-title").toLowerCase();
+    const category =
+      notice.getAttribute("data-category") || "";
+
+    const title =
+      (notice.getAttribute("data-title") || "").toLowerCase();
 
     const categoryMatch =
-      selectedNoticeCategory === "all" || category === selectedNoticeCategory;
+      selectedNoticeCategory === "all" ||
+      category === selectedNoticeCategory;
 
-    const searchMatch = title.includes(searchValue);
+    const searchMatch =
+      title.includes(searchValue);
 
     if (categoryMatch && searchMatch) {
       notice.style.display = "";
-
       visibleCount++;
     } else {
       notice.style.display = "none";
     }
   });
 
-  /* ================= No Result ================= */
-
   if (noNoticeFound) {
-    if (visibleCount === 0) {
-      noNoticeFound.classList.add("show");
-    } else {
-      noNoticeFound.classList.remove("show");
-    }
+    noNoticeFound.classList.toggle(
+      "show",
+      visibleCount === 0
+    );
   }
 }
-
-/* ================= Filter Buttons ================= */
 
 noticeFilterButtons.forEach(function (button) {
   button.addEventListener("click", function () {
@@ -752,30 +710,38 @@ noticeFilterButtons.forEach(function (button) {
 
     this.classList.add("active");
 
-    selectedNoticeCategory = this.getAttribute("data-filter");
+    selectedNoticeCategory =
+      this.getAttribute("data-filter");
 
     filterNotices();
   });
 });
 
-/* ================= Search ================= */
-
 if (noticeSearch) {
-  noticeSearch.addEventListener("input", function () {
-    filterNotices();
-  });
+  noticeSearch.addEventListener("input", filterNotices);
 }
 
-/* ================= Read More Modal ================= */
 
-const noticeReadButtons = document.querySelectorAll(".notice-read-btn");
+// =====================================================
+// NOTICE MODAL
+// =====================================================
+
+const noticeReadButtons =
+  document.querySelectorAll(".notice-read-btn");
 
 noticeReadButtons.forEach(function (button) {
   button.addEventListener("click", function () {
-    const title = this.getAttribute("data-title");
-    const date = this.getAttribute("data-date");
-    const category = this.getAttribute("data-category");
-    const description = this.getAttribute("data-description");
+    const title =
+      this.getAttribute("data-title") || "";
+
+    const date =
+      this.getAttribute("data-date") || "";
+
+    const category =
+      this.getAttribute("data-category") || "";
+
+    const description =
+      this.getAttribute("data-description") || "";
 
     if (modalNoticeTitle) {
       modalNoticeTitle.textContent = title;
@@ -796,13 +762,10 @@ noticeReadButtons.forEach(function (button) {
     if (noticeModal) {
       noticeModal.classList.add("show");
       noticeModal.setAttribute("aria-hidden", "false");
-
       document.body.style.overflow = "hidden";
     }
   });
 });
-
-/* ================= Close Modal ================= */
 
 function closeNoticeModal() {
   if (!noticeModal) {
@@ -810,17 +773,16 @@ function closeNoticeModal() {
   }
 
   noticeModal.classList.remove("show");
-
   noticeModal.setAttribute("aria-hidden", "true");
-
   document.body.style.overflow = "";
 }
 
 if (noticeModalClose) {
-  noticeModalClose.addEventListener("click", closeNoticeModal);
+  noticeModalClose.addEventListener(
+    "click",
+    closeNoticeModal
+  );
 }
-
-/* ================= Close by Background ================= */
 
 if (noticeModal) {
   noticeModal.addEventListener("click", function (event) {
@@ -829,8 +791,6 @@ if (noticeModal) {
     }
   });
 }
-
-/* ================= Close by ESC ================= */
 
 document.addEventListener("keydown", function (event) {
   if (
@@ -842,53 +802,52 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-/* =========================================================
-   CONTACT PAGE
-========================================================= */
 
-const contactForm = document.getElementById("contactForm");
-const contactSuccessMessage = document.getElementById("contactSuccessMessage");
+// =====================================================
+// CONTACT PAGE
+// =====================================================
+
+const contactForm =
+  document.getElementById("contactForm");
+
+const contactSuccessMessage =
+  document.getElementById("contactSuccessMessage");
 
 if (contactForm) {
   contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    /* ================= Get Form Values ================= */
+    const name =
+      document.getElementById("contactName")?.value.trim();
 
-    const name = document.getElementById("contactName").value.trim();
-    const email = document.getElementById("contactEmail").value.trim();
-    const subject = document.getElementById("contactSubject").value.trim();
-    const message = document.getElementById("contactMessage").value.trim();
+    const email =
+      document.getElementById("contactEmail")?.value.trim();
 
-    /* ================= Basic Validation ================= */
+    const subject =
+      document.getElementById("contactSubject")?.value.trim();
+
+    const message =
+      document.getElementById("contactMessage")?.value.trim();
 
     if (!name || !email || !subject || !message) {
       alert("Please fill in all required fields.");
-
       return;
     }
 
-    /* ================= Email Validation ================= */
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Correct email validation
+    const emailPattern =
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailPattern.test(email)) {
       alert("Please enter a valid email address.");
-
       return;
     }
-
-    /* ================= Success ================= */
 
     if (contactSuccessMessage) {
       contactSuccessMessage.classList.add("show");
     }
 
-    /* ================= Reset Form ================= */
-
     contactForm.reset();
-
-    /* ================= Hide Success Message ================= */
 
     setTimeout(function () {
       if (contactSuccessMessage) {
